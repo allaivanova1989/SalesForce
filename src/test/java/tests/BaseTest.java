@@ -1,7 +1,6 @@
 package tests;
 
-import pages.HomePage;
-import pages.LoginPage;
+import pages.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,6 +15,9 @@ public abstract class BaseTest {
     WebDriver driver;
     LoginPage loginPage;
     HomePage homePage;
+    AccountListPage accountListPage;
+    AccountModalPage accountModalPage;
+    AccountDetailsPage accountDetailsPage;
 
     @BeforeMethod
     public void setup() {
@@ -26,6 +28,9 @@ public abstract class BaseTest {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
+        accountListPage = new AccountListPage(driver);
+        accountModalPage = new AccountModalPage(driver);
+        accountDetailsPage = new AccountDetailsPage(driver);
 
     }
 
