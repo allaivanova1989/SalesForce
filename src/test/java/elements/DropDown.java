@@ -5,7 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 public class DropDown {
     String dropDownLocator ="//div[contains(@class,'modal-body')]//span[text()='%s']/ancestor::div[contains(@class,'uiInput')]/div[@class='uiMenu']";
-    String optionLocator ="//div[contains(@class,'visible')]//a[text()='%s']";
+        String optionLocator ="//div[contains(@class,'visible')]//a[text()='%s']";
+
 
     WebDriver driver;
     String label;
