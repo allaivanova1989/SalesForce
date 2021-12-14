@@ -3,19 +3,18 @@ package elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class TextArea {
-    protected String textAreaLocator = "//div[contains(@class,'modal-body')]//span[text()='%s']/../..//textarea";
+public class TextAreaForContacts {
+    protected String textAreaLocator = "//lightning-textarea//label[text()='%s']/ancestor::lightning-textarea//textarea";
 
     WebDriver driver;
     String Label;
 
-    public TextArea(WebDriver driver, String label) {
+    public TextAreaForContacts(WebDriver driver, String label) {
         this.driver = driver;
         Label = label;
     }
 
     public void write(String text) {
-        System.out.printf("Writing text '%s' into textarea with Label'%s'\n", text, this.Label);
         driver.findElement(By.xpath(String.format(textAreaLocator, this.Label))).sendKeys(text);
     }
 }

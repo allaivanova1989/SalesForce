@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AccountDetailsPage extends BasePage {
-    public static final By DETAILS_LINK = By.xpath("//a[@id='detailTab__item']");
+    private static final By DETAILS_LINK = By.xpath("//a[@id='detailTab__item']");
     String fieldValue = "//flexipage-tab2//force-record-layout-item//span[text()='%s']/ancestor::force-record-layout-item//slot[@slot=\"outputField\"]//*";
 
     public String getFieldValueByName(String fieldName) {
