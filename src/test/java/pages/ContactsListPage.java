@@ -14,10 +14,12 @@ public class ContactsListPage extends BasePage {
     public boolean isPageOpen() {
         return isExist(BREADFCRUMBS_LABEL);
     }
+
     public ContactsListPage open() {
         driver.get(BASE_URL + "/lightning/o/Contact/list");
         return this;
     }
+
     public ContactModalPage clickNew() {
         driver.findElement(BUTTON_NEW).click();
         return new ContactModalPage(driver);
