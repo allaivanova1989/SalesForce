@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
-    @Test
+    @Test(description = "Login to the site")
     public void login() {
         boolean isHomePageOpen = loginPage
                 .open()
@@ -15,6 +15,5 @@ public class LoginTest extends BaseTest {
 
         Assert.assertTrue(isHomePageOpen, "Страница HomePage не открылась.");
     }
-
 
 }

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class TextAreaForContacts {
-    protected String textAreaLocator = "//lightning-textarea//label[text()='%s']/ancestor::lightning-textarea//textarea";
+    private String textAreaLocator = "//lightning-textarea//label[text()='%s']/ancestor::lightning-textarea//textarea";
 
     WebDriver driver;
     String Label;

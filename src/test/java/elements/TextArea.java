@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class TextArea {
-    protected String textAreaLocator = "//div[contains(@class,'modal-body')]//span[text()='%s']/../..//textarea";
+    private String textAreaLocator = "//div[contains(@class,'modal-body')]//span[text()='%s']/../..//textarea";
 
     WebDriver driver;
     String Label;
