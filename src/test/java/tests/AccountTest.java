@@ -6,7 +6,7 @@ import org.testng.Assert;
 
 public class AccountTest extends BaseTest {
 
-    @Test
+    @Test(description = "Creating new account")
     public void accountShouldBeCreated() {
         loginPage
                 .open()
@@ -56,7 +56,6 @@ public class AccountTest extends BaseTest {
         Assert.assertEquals(accountDetailsPage.getFieldValueByName("Description"), account.getDescription(), "Описание отображается не корректно.");
         Assert.assertEquals(accountDetailsPage.getFieldValueByName("Billing Address"), account.getBillingStreet() + "\n" + account.getBillingCity() + ", " + account.getBillingStateProvince() + " " + account.getBillingZipPostalCode() + "\n" + account.getBillingCountry(), "Адрес отображается не корректно.");
         Assert.assertEquals(accountDetailsPage.getFieldValueByName("Shipping Address"), account.getShippingStreet() + "\n" + account.getShippingCity() + ", " + account.getShippingStateProvince() + " " + account.getShippingZipPostalCode() + "\n" + account.getShippingCountry(), "Почтовый адрес отображается не корректно.");
-
 
     }
 

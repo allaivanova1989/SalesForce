@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class Input {
-    String inputLocator = "//div[contains(@class,'modal-body')]//span[text()='%s']/ancestor::div[contains(@class,'uiInput')]//input";
+    private String inputLocator = "//div[contains(@class,'modal-body')]//span[text()='%s']/ancestor::div[contains(@class,'uiInput')]//input";
 
     WebDriver driver;
     String Label;
@@ -25,8 +25,6 @@ public class Input {
         driver.findElement(By.xpath(String.format(inputLocator, this.Label))).click();
         driver.findElement(By.xpath("//li[@class=\"lookup__item  default uiAutocompleteOption forceSearchInputLookupDesktopOption\"][1]")).click();
 
-
     }
-
 
 }

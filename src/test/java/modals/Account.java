@@ -1,26 +1,26 @@
 package modals;
 
 public class Account {
-   private String accountName;
-   private String webSite;
-   private String type;
-   private String phone;
-   private String fax;
-   private String employees;
-   private String industry;
-   private String annualRevenue;
-   private String parentAccount;
-   private String description;
-   private String billingStreet;
-   private String shippingStreet;
-   private String billingCity;
-   private String billingStateProvince;
-   private String shippingCity;
-   private String shippingStateProvince;
-   private String billingZipPostalCode;
-   private String billingCountry;
-   private String shippingZipPostalCode;
-   private String shippingCountry;
+    private String accountName;
+    private String webSite;
+    private String type;
+    private String phone;
+    private String fax;
+    private String employees;
+    private String industry;
+    private String annualRevenue;
+    private String parentAccount;
+    private String description;
+    private String billingStreet;
+    private String shippingStreet;
+    private String billingCity;
+    private String billingStateProvince;
+    private String shippingCity;
+    private String shippingStateProvince;
+    private String billingZipPostalCode;
+    private String billingCountry;
+    private String shippingZipPostalCode;
+    private String shippingCountry;
 
     public Account(String accountName, String webSite, String type, String phone, String fax, String employees, String industry, String annualRevenue, String parentAccount, String description, String billingStreet, String shippingStreet, String billingCity, String billingStateProvince, String shippingCity, String shippingStateProvince, String billingZipPostalCode, String billingCountry, String shippingZipPostalCode, String shippingCountry) {
         this.accountName = accountName;

@@ -8,8 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AccountModalPage extends BasePage {
-    public static final By MODAL_TITLE = By.xpath("//*[contains(@class, 'inlineTitle')]");
-    public static final By CHEACKBOX_COPY_BILLING_ADRESS_TO_SHOPPING_ADRESS = By.xpath("//div[@class='uiInput uiInputCheckbox uiInput--default uiInput--checkbox']//input[@type='checkbox']");
+    private static final By MODAL_TITLE = By.xpath("//*[contains(@class, 'inlineTitle')]");
+    private static final By CHEACKBOX_COPY_BILLING_ADRESS_TO_SHOPPING_ADRESS = By.xpath("//div[@class='uiInput uiInputCheckbox uiInput--default uiInput--checkbox']//input[@type='checkbox']");
 
     public AccountModalPage(WebDriver driver) {
         super(driver);
@@ -46,9 +46,8 @@ public class AccountModalPage extends BasePage {
 
     }
 
-    public AccountDetailsPage clickSave() {
+    private AccountDetailsPage clickSave() {
         driver.findElement(SAVE_BUTTON).click();
         return new AccountDetailsPage(driver);
-
     }
 }
