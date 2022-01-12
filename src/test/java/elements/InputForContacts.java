@@ -17,7 +17,6 @@ public class InputForContacts {
 
     public void write(String text) {
         driver.findElement(By.xpath(String.format(inputLocator, this.Label))).sendKeys(text);
-
     }
 
     public void selectAccountName(String text) {

@@ -22,6 +22,7 @@ public class ContactModalPage extends BasePage {
         new InputForContacts(driver, "First Name").write(contact.getFirstName());
         new DropDownForContacts(driver, "Salutation").selectOption(contact.getSalutation());
         new InputForContacts(driver, "Last Name").write(contact.getLastName());
+        new InputForContacts(driver, "Suffix").write(contact.getSuffix());
         new InputForContacts(driver, "Account Name").selectAccountName(contact.getAccountName());
         new InputForContacts(driver, "Title").write(contact.getTitle());
         new InputForContacts(driver, "Phone").write(contact.getPhone());
@@ -31,21 +32,10 @@ public class ContactModalPage extends BasePage {
         new InputForContacts(driver, "Mailing State/Province").write(contact.getMailingStateProvince());
         new InputForContacts(driver, "Mailing Country").write(contact.getMailingCountry());
         new InputForContacts(driver, "Mailing Zip/Postal Code").write(contact.getMailingZipPostalCode());
-        new InputForContacts(driver, "Other City").write(contact.getOtherCity());
-        new InputForContacts(driver, "Other State/Province").write(contact.getOtherStateProvince());
-        new InputForContacts(driver, "Other Zip/Postal Code").write(contact.getOtherZipPostalCode());
-        new InputForContacts(driver, "Other Country").write(contact.getOtherCountry());
         new InputForContacts(driver, "Fax").write(contact.getFax());
-        new InputForContacts(driver, "Home Phone").write(contact.getHomePhone());
-        new InputForContacts(driver, "Other Phone").write(contact.getOtherPhone());
-        new InputForContacts(driver, "Asst. Phone").write(contact.getAsstPhone());
-        new InputForContacts(driver, "Assistant").write(contact.getAssistant());
         new InputForContacts(driver, "Department").write(contact.getDepartment());
         new TextAreaForContacts(driver, "Mailing Street").write(contact.getMailingStreet());
-        new TextAreaForContacts(driver, "Other Street").write(contact.getOtherStreet());
-        new TextAreaForContacts(driver, "Description").write(contact.getDescription());
-        new DropDownForContacts(driver, "Lead Source").selectOption(contact.getLeadSource());
-        new DropDownForContacts(driver, "Birthdate").selectBirthdate(contact.getBirthdate());
+
 
         return clickSave();
     }

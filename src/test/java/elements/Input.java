@@ -23,7 +23,15 @@ public class Input {
     public void selectParentAccount(String text) {
 
         driver.findElement(By.xpath(String.format(inputLocator, this.Label))).click();
-        driver.findElement(By.xpath("//li[@class=\"lookup__item  default uiAutocompleteOption forceSearchInputLookupDesktopOption\"][1]")).click();
+        try {
+
+            if (driver.findElement(By.xpath("//li[@class=\"lookup__item  default uiAutocompleteOption forceSearchInputLookupDesktopOption\"][1]")).isSelected()) {
+                driver.findElement(By.xpath("//li[@class=\"lookup__item  default uiAutocompleteOption forceSearchInputLookupDesktopOption\"][1]")).click();
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
     }
 

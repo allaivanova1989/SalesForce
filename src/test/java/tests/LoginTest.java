@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest {
     public void login() {
         boolean isHomePageOpen = loginPage
                 .open()
-                .login("baby20086-fgbt@force.com", "19891206Ai")
+                .login("darina07122016-rhp4@force.com", "darina1206")
                 .isPageOpen();
 
         Assert.assertTrue(isHomePageOpen, "Страница HomePage не открылась.");

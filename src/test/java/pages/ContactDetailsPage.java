@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class ContactDetailsPage extends BasePage {
     private static final By DETAILS_LINK = By.xpath("//a[@id='detailTab__item']");
-    private String fieldValue = "//flexipage-tab2//force-record-layout-item//span[text()='%s']/ancestor::force-record-layout-item//slot[@slot=\"outputField\"]//*";
+    private String fieldValue = "//div//p[text()='%s']/..//p[@class=\"fieldComponent slds-text-body--regular slds-show_inline-block slds-truncate\"]";
 
     public String getFieldValueByNameContacts(String fieldName) {
         return driver.findElement(By.xpath(String.format(fieldValue, fieldName))).getText();
