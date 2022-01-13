@@ -1,5 +1,6 @@
 package tests;
 
+import lombok.extern.log4j.Log4j2;
 import modals.Account;
 import modals.AccountFactory;
 import modals.Contact;
@@ -7,10 +8,12 @@ import modals.ContactFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+@Log4j2
 public class ContactsTest extends BaseTest {
 
     @Test(description = "Creating new contact")
     public void contactShouldBeCreated() {
+        log.debug("Creating new contact");
         loginPage
                 .open()
                 .login("darina07122016-rhp4@force.com", "darina1206");

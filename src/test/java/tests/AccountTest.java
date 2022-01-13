@@ -12,6 +12,7 @@ public class AccountTest extends BaseTest {
 
     @Test(description = "Creating new account")
     public void accountShouldBeCreated() {
+        log.info("Creating new account");
         loginPage
                 .open()
                 .login("darina07122016-rhp4@force.com", "darina1206");

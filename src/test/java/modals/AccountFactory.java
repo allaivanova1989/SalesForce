@@ -1,11 +1,14 @@
 package modals;
 
 import com.github.javafaker.Faker;
+import lombok.extern.log4j.Log4j2;
 
+@Log4j2
 public class AccountFactory {
     static Faker faker = new Faker();
 
     public static Account get() {
+        log.debug("Fill in the fields to create an account");
         return Account.builder()
                 .accountName(faker.gameOfThrones().dragon())
                 .billingCity(faker.address().cityName())

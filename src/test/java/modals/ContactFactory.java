@@ -1,11 +1,14 @@
 package modals;
 
 import com.github.javafaker.Faker;
+import lombok.extern.log4j.Log4j2;
 
+@Log4j2
 public class ContactFactory {
     static Faker faker = new Faker();
 
     public static Contact get() {
+        log.debug("Fill in the fields to create contact");
         return Contact.builder()
                 .salutation("Ms.")
                 .firstName(faker.gameOfThrones().character())
