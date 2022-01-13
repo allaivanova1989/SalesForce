@@ -1,5 +1,6 @@
 package tests;
 
+import lombok.extern.log4j.Log4j2;
 import pages.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
+@Log4j2
 public abstract class BaseTest {
 
     WebDriver driver;
@@ -24,6 +26,7 @@ public abstract class BaseTest {
 
     @BeforeMethod
     public void setup() {
+        log.debug("Setup settings");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
@@ -42,6 +45,7 @@ public abstract class BaseTest {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
+        log.info("Browser close");
         driver.quit();
     }
 

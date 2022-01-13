@@ -1,8 +1,10 @@
 package elements;
 
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+@Log4j2
 public class DropDown {
     private String dropDownLocator = "//div[contains(@class,'modal-body')]//span[text()='%s']/ancestor::div[contains(@class,'uiInput')]/div[@class='uiMenu']";
     private String optionLocator = "//div[contains(@class,'visible')]//a[text()='%s']";
@@ -16,7 +18,7 @@ public class DropDown {
     }
 
     public void selectOption(String option) {
-        System.out.printf("Select option '%s' into dropDown with Label'%s'\n", option, this.label);
+        log.info("Selecting an option from the list by name when creating an account");
         driver.findElement(By.xpath(String.format(dropDownLocator, this.label))).click();
         driver.findElement(By.xpath(String.format(optionLocator, option))).click();
 
